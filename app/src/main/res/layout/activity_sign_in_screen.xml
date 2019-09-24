@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInScreen">
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etpassword"
+        app:layout_constraintEnd_toEndOf="@+id/etpassword"
+        app:layout_constraintStart_toStartOf="@+id/etpassword"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="282dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="142dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnsignin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnsignin"
+        android:layout_width="109dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="32dp"
+        android:text="SignIn"
+        app:layout_constraintBottom_toTopOf="@+id/btnsignup"
+        app:layout_constraintEnd_toEndOf="@+id/etpassword"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword" />
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="334dp"
+        android:text="SignUp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etpassword"
+        app:layout_constraintStart_toStartOf="@+id/btnsignin"
+        app:layout_constraintTop_toBottomOf="@+id/btnsignin" />
+</android.support.constraint.ConstraintLayout>
