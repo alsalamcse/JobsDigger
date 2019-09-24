@@ -48,12 +48,12 @@
         android:layout_marginRight="1dp"
         android:layout_marginBottom="32dp"
         android:text="SignIn"
-        app:layout_constraintBottom_toTopOf="@+id/btnsignup"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
         app:layout_constraintEnd_toEndOf="@+id/etpassword"
         app:layout_constraintTop_toBottomOf="@+id/etpassword" />
 
     <Button
-        android:id="@+id/btnsignup"
+        android:id="@+id/btnSignup"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="334dp"
