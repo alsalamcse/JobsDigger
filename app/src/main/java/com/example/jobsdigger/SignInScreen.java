@@ -15,8 +15,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignInScreen extends AppCompatActivity
 {
-    EditText etemail,etpassword;
-    Button btnsignin,btnSignup;
+  private   EditText etemail,etpassword;
+   private Button btnsignin,btnSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

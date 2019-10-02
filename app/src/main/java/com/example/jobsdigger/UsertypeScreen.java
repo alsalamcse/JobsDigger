@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class UsertypeScreen extends AppCompatActivity {
-    Button btnCompany,btnJobSerarcher;
+  private   Button btnCompany,btnJobSerarcher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

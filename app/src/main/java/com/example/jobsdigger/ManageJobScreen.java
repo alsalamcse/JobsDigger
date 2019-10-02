@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class ManageJobScreen extends AppCompatActivity {
 
-    Button btnaddjob,btnSeeCustomer,btnUpdate;
+   private Button btnaddjob,btnSeeCustomer,btnUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
