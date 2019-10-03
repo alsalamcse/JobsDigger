@@ -2,6 +2,7 @@ package com.example.jobsdigger;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -21,6 +22,47 @@ public class CompanySignUpScreen extends AppCompatActivity {
         etPlace=findViewById(R.id.etPlace);
         btnSignup=findViewById(R.id.btnSignup);
 
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+
+            }
+        });
+    }
+    public void dataHandler()
+    {
+     boolean isok=true;
+     String Email=etEmail.getText().toString();
+     String password=etPassword.getText().toString();
+     String CompanyName=etCompanyname.getText().toString();
+     String PhoneNumber=etPhone.getText().toString();
+     String Place=etPlace.getText().toString();
+        if (Email.length()<4||Email.indexOf('@')<0||Email.indexOf('.')<0)
+        {
+            etEmail.setError("Wrong Email");
+            isok=false;
+
+        }
+        if (password.length()<8){
+            etPassword.setError("Have to be at least 8 char");
+            isok=false;
+        }
+        if (CompanyName.length()==0){
+            etCompanyname.setError("Enter Company Name");
+            isok=false;
+        }
+        if (PhoneNumber.length()<10){
+
+
+        etPhone.setError("Have to be at least 10 nums");
+        isok=false;
+    }
+    if (Place.length()==0)
+    {
 
     }
+    }
+
+
 }
