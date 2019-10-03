@@ -86,7 +86,7 @@ public class CustomerSignUpScreen extends AppCompatActivity {
         }
     }
 
-    private void createAcount(String Email, String password, String firstName, String lastName, String phone)
+    private void createAcount(String Email, String password, String FirstName, String LastName, String phone)
     {
         FirebaseAuth auth=FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(Email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
