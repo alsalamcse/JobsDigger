@@ -19,7 +19,6 @@
         <activity android:name=".CompanySignUpScreen" />
         <activity android:name=".UsertypeScreen" />
         <activity android:name=".SignInScreen" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".welcomescreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -8,17 +8,14 @@
 
     <Button
         android:id="@+id/btnCompany"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginLeft="66dp"
-        android:layout_marginTop="174dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginRight="66dp"
-        android:layout_marginBottom="53dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginBottom="42dp"
         android:text="Company"
         app:layout_constraintBottom_toTopOf="@+id/btnJobSearcher"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,14 +23,10 @@
         android:id="@+id/btnJobSearcher"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
-        android:layout_marginBottom="375dp"
+        android:layout_marginBottom="381dp"
         android:text="Job Searcher"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnCompany"
+        app:layout_constraintStart_toStartOf="@+id/btnCompany"
         app:layout_constraintTop_toBottomOf="@+id/btnCompany" />
 </android.support.constraint.ConstraintLayout>
