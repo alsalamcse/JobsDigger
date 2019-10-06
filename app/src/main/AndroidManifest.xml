@@ -14,13 +14,13 @@
         <activity android:name=".ManageJobScreen" />
         <activity android:name=".JobDetailsAndApplyJobScreen" />
         <activity android:name=".JobslistScreen" />
-        <activity android:name=".CustomerDetailsScreen\" />
+        <activity android:name=".CustomerDetailsScreen" />
         <activity android:name=".CustomerSignUpScreen" />
         <activity android:name=".CompanySignUpScreen" />
         <activity android:name=".UsertypeScreen" />
         <activity android:name=".SignInScreen" />
-        <activity android:name=".welcomescreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".welcomescreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
