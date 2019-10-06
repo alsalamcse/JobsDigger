@@ -3,7 +3,7 @@ package data;
 public class MyJob
 {
     String key;
-    String Name;
+    String Subject;
     String TermsofAcceptanc;
     String place;
     String Companey;
@@ -19,12 +19,12 @@ public class MyJob
         this.key = key;
     }
 
-    public String getName() {
-        return Name;
+    public String getSubject() {
+        return Subject;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setSubject(String name) {
+        Subject = name;
     }
 
     public String getTermsofAcceptanc() {
@@ -54,7 +54,7 @@ public class MyJob
     public String toString() {
         return "MyJob{" +
                 "key='" + key + '\'' +
-                ", Name='" + Name + '\'' +
+                ", Subject='" + Subject+ '\'' +
                 ", TermsofAcceptanc='" + TermsofAcceptanc + '\'' +
                 ", place='" + place + '\'' +
                 ", Companey='" + Companey + '\'' +
