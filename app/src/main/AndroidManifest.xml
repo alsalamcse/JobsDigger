@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SeeCustomersScreen"></activity>
+        <activity android:name=".CustomerDetailsScreen"></activity>
+        <activity android:name=".SeeCustomersScreen" />
         <activity android:name=".AddJobScreen" />
         <activity android:name=".ManageJobScreen" />
         <activity android:name=".JobDetailsAndApplyJobScreen" />
         <activity android:name=".JobslistScreen" />
-        <activity android:name=".CustomerDetailsScreen" />
         <activity android:name=".CustomerSignUpScreen" />
         <activity android:name=".CompanySignUpScreen" />
         <activity android:name=".UsertypeScreen" />

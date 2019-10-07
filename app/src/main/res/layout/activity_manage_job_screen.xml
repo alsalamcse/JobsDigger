@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/btnaddjob"
-        android:layout_width="123dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="28dp"
         android:text="Add Job"
@@ -20,8 +20,8 @@
 
     <Button
         android:id="@+id/btnSeeCustomer"
-        android:layout_width="124dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="31dp"
         android:text="See Customer"
         app:layout_constraintBottom_toTopOf="@+id/btnUpdate"
@@ -31,8 +31,8 @@
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="131dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="313dp"
         android:text="Update job"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="19dp"
@@ -17,13 +17,14 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etPasword"
         app:layout_constraintEnd_toEndOf="@+id/etPasword"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etPasword"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etPasword"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="password"
@@ -35,7 +36,7 @@
 
     <EditText
         android:id="@+id/etCompanyname"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
         android:ems="10"
@@ -48,20 +49,21 @@
 
     <EditText
         android:id="@+id/etPlace"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
         android:ems="10"
         android:hint="Place"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etPhone"
         app:layout_constraintEnd_toEndOf="@+id/btnSignup"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etPhone"
         app:layout_constraintTop_toBottomOf="@+id/etCompanyname" />
 
     <EditText
         android:id="@+id/etPhone"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -78,8 +80,8 @@
 
     <Button
         android:id="@+id/btnSignup"
-        android:layout_width="118dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="55dp"
         android:layout_marginRight="55dp"
         android:layout_marginBottom="326dp"

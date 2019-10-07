@@ -57,7 +57,7 @@ public class AddJobScreen extends AppCompatActivity {
 
                 if (isok)
                 {
-                    MyJob myJobb=new MyJob();
+                    MyJob myJob=new MyJob();
 
                 }
 
