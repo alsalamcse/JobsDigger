@@ -33,7 +33,7 @@ public class SignInScreen extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplication(),UsertypeScreen.class);
+                Intent intent = new Intent(getApplication(),CustomerSignUpScreen.class);
                 startActivity(intent);
             }
         });

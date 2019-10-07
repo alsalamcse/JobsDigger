@@ -18,7 +18,7 @@ public class welcomescreen extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3*1000);
-                    Intent i=new Intent(getApplication(),SignInScreen.class);
+                    Intent i=new Intent(getApplication(),HomeScreen.class);
                     startActivity(i);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
