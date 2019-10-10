@@ -27,6 +27,7 @@ public class ManageJobScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +35,7 @@ public class ManageJobScreen extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
         btnSeeCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -83,16 +83,14 @@ public class SignInScreen extends AppCompatActivity
 
     }
 
-    private void signIn(String email,String pass)
+    private void signIn(String email,String password)
     {
         FirebaseAuth auth=FirebaseAuth.getInstance();
-        auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful())
                 {
-                    //todo go to, main screen(all task activity)
-
 
                     Intent i =new Intent(getApplication(),JobslistScreen.class);
                     startActivity(i);
