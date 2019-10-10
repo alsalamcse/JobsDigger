@@ -89,7 +89,8 @@ public class CompanySignUpScreen extends AppCompatActivity {
 
                 }
                 else {
-                    etEmail.setError("SignUp fialed");
+                    etEmail.setError("SignUp fialed"+task.getException().getMessage() );
+                    task.getException().printStackTrace();
                 }
 
             }
