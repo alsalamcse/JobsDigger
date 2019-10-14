@@ -98,7 +98,8 @@ public class SignInScreen extends AppCompatActivity
                 }
                 else
                 {
-                    etemail.setError("email or password is wrong");
+                    etemail.setError("email or password is wrong"+task.getException().getMessage());
+                    task.getException().printStackTrace();
 
 
 
