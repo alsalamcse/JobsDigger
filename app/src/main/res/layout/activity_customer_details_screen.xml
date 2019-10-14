@@ -7,7 +7,7 @@
     tools:context=".CustomerDetailsScreen">
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/etage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
@@ -16,22 +16,22 @@
         android:ems="10"
         android:hint="Age"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintEnd_toEndOf="@+id/eteducation"
+        app:layout_constraintTop_toBottomOf="@+id/eteducation" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/ethistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:ems="10"
         android:hint="employment history"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editText9"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintStart_toStartOf="@+id/etage"
+        app:layout_constraintTop_toBottomOf="@+id/etage" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/etSkills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -41,10 +41,10 @@
         android:hint="skills"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/ethistory" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/etlang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -54,10 +54,10 @@
         android:hint="languages"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/etSkills" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/eteducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/etinter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -80,10 +80,10 @@
         android:hint="interships"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/etlang" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/etreference"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -93,10 +93,10 @@
         android:hint="reference"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/etinter" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/etcourses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -105,11 +105,11 @@
         android:ems="10"
         android:hint="courses"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintStart_toStartOf="@+id/etreference"
+        app:layout_constraintTop_toBottomOf="@+id/etreference" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/etIDnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -118,11 +118,11 @@
         android:ems="10"
         android:hint="ID number"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editText7"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintStart_toStartOf="@+id/etcourses"
+        app:layout_constraintTop_toBottomOf="@+id/etcourses" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
@@ -130,7 +130,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="94dp"
         android:text="Save"
-        app:layout_constraintBottom_toBottomOf="@+id/editText4"
+        app:layout_constraintBottom_toBottomOf="@+id/etlang"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/eteducation" />
 </android.support.constraint.ConstraintLayout>
