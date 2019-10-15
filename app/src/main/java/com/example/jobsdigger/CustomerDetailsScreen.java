@@ -2,6 +2,7 @@ package com.example.jobsdigger;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -20,5 +21,48 @@ public class CustomerDetailsScreen extends AppCompatActivity {
         etSkills=findViewById(R.id.etSkills);
         etlang=findViewById(R.id.etlang);
         etinter=findViewById(R.id.etinter);
+        etreference=findViewById(R.id.etreference);
+        etcourses=findViewById(R.id.etcourses);
+        etIDnumber=findViewById(R.id.etIDnumber);
+        btnSave=findViewById(R.id.btnSave);
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+    }
+    private void dataHandler(){
+        boolean isok=true;
+        String Education=eteducation.getText().toString();
+        String Age=etage.getText().toString();
+        String EmploymentHistory=ethistory.getText().toString();
+        String Skills=etSkills.getText().toString();
+        String language=etlang.getText().toString();
+        String interships=etinter.getText().toString();
+        String reference=etreference.getText().toString();
+        String courses=etcourses.getText().toString();
+        String IDnumber=etIDnumber.getText().toString();
+
+        if (Education.length()== 0)
+        {
+            eteducation.setError("Enter Education");
+            isok=false;
+
+        }
+
+        if (Age.length()<=18){
+            etage.setError("Enter the age of 18 years and above ");
+            isok=false;
+        }
+        if (EmploymentHistory.length()==0){
+            ethistory.setError("Enter EmploymentHistory");
+            isok=false;
+        }
+
+
+
+
     }
 }
