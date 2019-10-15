@@ -60,6 +60,10 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             ethistory.setError("Enter EmploymentHistory");
             isok=false;
         }
+        if (Skills.length()==0){
+            etSkills.setError("Enter Sills");
+            isok=false;
+        }
 
 
 
