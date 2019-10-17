@@ -3,7 +3,9 @@ package com.example.jobsdigger;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class JobDetailsAndApplyJobScreen extends AppCompatActivity {
+public class JobDetailsAndApplyJobScreen extends AppCompatActivity
+{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
