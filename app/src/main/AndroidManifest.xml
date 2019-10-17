@@ -19,7 +19,9 @@
         <activity android:name=".JobslistScreen" />
         <activity android:name=".CustomerSignUpScreen" />
         <activity android:name=".CompanySignUpScreen" />
-        <activity android:name=".SignInScreen" />
+        <activity android:name=".SignInScreen" >
+
+        </activity>
         <activity android:name=".welcomescreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

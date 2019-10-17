@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "388418979245",
+    "firebase_url": "https://jobsdigger-dcd6f.firebaseio.com",
+    "project_id": "jobsdigger-dcd6f",
+    "storage_bucket": "jobsdigger-dcd6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388418979245:android:f22b90d9e417a2454b8d24",
+        "android_client_info": {
+          "package_name": "com.example.jobsdigger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388418979245-98v93risejp80f30lglf95as771picv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jobsdigger",
+            "certificate_hash": "8d4e87598d212bdb282d05faa7766dc9c486dbdf"
+          }
+        },
+        {
+          "client_id": "388418979245-e3oudjeqto3orms6qukoan5m7kordtqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzev_HxuewxX-36KMJ31LDaHvvoY-oWSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388418979245-e3oudjeqto3orms6qukoan5m7kordtqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
