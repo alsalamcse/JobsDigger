@@ -22,7 +22,7 @@ public class welcomescreen extends AppCompatActivity {
                     FirebaseAuth auth = FirebaseAuth.getInstance();
 
                     if (auth.getCurrentUser() == null || auth.getCurrentUser().getEmail() == null) {
-                        Intent i = new Intent(getApplication(), SignInScreen.class);
+                        Intent i = new Intent(getApplication(), HomeScreen.class);
                         startActivity(i);
                         finish();
                     } else {

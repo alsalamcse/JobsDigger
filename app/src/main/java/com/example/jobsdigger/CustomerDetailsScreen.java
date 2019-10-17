@@ -1,5 +1,6 @@
 package com.example.jobsdigger;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,8 @@ public class CustomerDetailsScreen extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                Intent intent=new Intent(getApplication(),CustomerSignUpScreen.class);
+                startActivity(intent);
             }
         });
     }
@@ -52,7 +54,8 @@ public class CustomerDetailsScreen extends AppCompatActivity {
 
         }
 
-        if (Age.length()<=18){
+        if (Age.length()<18)
+        {
             etage.setError("Enter the age of 18 years and above ");
             isok=false;
         }
@@ -64,6 +67,29 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             etSkills.setError("Enter Sills");
             isok=false;
         }
+        if (language.length()==0){
+            etlang.setError("Enter Language");
+            isok=false;
+        }
+        if (interships.length()==0){
+            etinter.setError("Enter interships");
+            isok=false;
+        }
+        if (reference.length()==0){
+            etreference.setError("Enter reference");
+            isok=false;
+        }
+        if (courses.length()==0){
+            etcourses.setError("Enter courses");
+            isok=false;
+        }
+        if (IDnumber.length()==0){
+            etIDnumber.setError("Enter ID Number");
+            isok=false;
+
+        }
+
+
 
 
 
