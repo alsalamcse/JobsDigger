@@ -30,8 +30,7 @@ public class CustomerDetailsScreen extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplication(),CustomerSignUpScreen.class);
-                startActivity(intent);
+              dataHandler();
             }
         });
     }
