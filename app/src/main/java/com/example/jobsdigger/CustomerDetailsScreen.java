@@ -87,6 +87,11 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             isok=false;
 
         }
+        if (isok)
+        {
+            finish();
+        }
+
 
 
 
