@@ -2,11 +2,11 @@ package data;
 
 public class MyJob
 {
-    String key;
-    String Subject;
-    String TermsofAcceptanc;
-    String place;
-    String Companey;
+   private String key;
+   private String Subject;
+   private String TermsofAcceptanc;
+    private String place;
+   private String Companey;
 
     public MyJob(){
 
