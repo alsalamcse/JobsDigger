@@ -89,7 +89,7 @@ public class CustomerDetailsScreen extends AppCompatActivity {
         }
         if (isok)
         {
-            finish();
+
         }
 
 

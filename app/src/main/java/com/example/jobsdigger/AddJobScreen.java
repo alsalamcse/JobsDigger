@@ -70,6 +70,9 @@ public class AddJobScreen extends AppCompatActivity {
         if (isok) {
             MyJob myJob = new MyJob();
             myJob.setSubject(Subject);
+            myJob.setPlace(place);
+            myJob.setCompaney(Company);
+            myJob.setTermsofAcceptanc(TermsOfAcceptane);
             createMyJob(myJob);
 
         }
