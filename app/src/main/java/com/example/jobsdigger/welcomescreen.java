@@ -26,7 +26,7 @@ public class welcomescreen extends AppCompatActivity {
                         startActivity(i);
                         finish();
                     } else {
-                        Intent i = new Intent(getApplication(), JobslistScreen.class);
+                        Intent i = new Intent(getApplication(), HomeScreen.class);
                         startActivity(i);
                         finish();
                     }
