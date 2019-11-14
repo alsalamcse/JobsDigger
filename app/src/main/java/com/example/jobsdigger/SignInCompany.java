@@ -21,6 +21,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class SignInCompany extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     private EditText etNumber, etSMS;
     private Button btnIn, btnUp,btnGet;
 
@@ -106,7 +107,6 @@ public class SignInCompany extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    FirebaseUser user = task.getResult().getUser();
                     Intent intent = new Intent(getApplication(), ManageJobScreen.class);
                     startActivity(intent);
 
