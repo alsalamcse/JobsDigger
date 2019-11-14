@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SignInCompany extends AppCompatActivity {
     private EditText etNumber, etSMS;
-    private Button btnIn, btnUp;
+    private Button btnIn, btnUp,btnGet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class SignInCompany extends AppCompatActivity {
         etSMS = findViewById(R.id.etSMS);
         btnIn = findViewById(R.id.btnIn);
         btnUp = findViewById(R.id.btnUp);
+        btnGet=findViewById(R.id.btnGet);
 
         btnUp.setOnClickListener(new View.OnClickListener() {
             @Override
