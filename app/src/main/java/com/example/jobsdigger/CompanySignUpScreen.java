@@ -72,12 +72,12 @@ public class CompanySignUpScreen extends AppCompatActivity {
     }
     if (isok)
     {
-        createCompanyAccount(Email,password,CompanyName,PhoneNumber,Place);
+        createCompanyAccount(Email,password);
 
     }
     }
 
-    private void createCompanyAccount(String Email,String password,String CompanyName,String PhoneNumber,String Place)
+    private void createCompanyAccount(String Email,String password)
     {
         FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
         firebaseAuth.createUserWithEmailAndPassword(Email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

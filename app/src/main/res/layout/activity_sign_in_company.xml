@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="PhoneNumber"
         android:inputType="textPersonName"
@@ -25,11 +24,13 @@
         android:id="@+id/etSMS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:ems="10"
         android:hint="Code"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnIn"
-        app:layout_constraintStart_toStartOf="@+id/btnIn"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGet" />
 
     <Button
@@ -38,7 +39,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="7dp"
         android:text="SIgnIN"
         app:layout_constraintBottom_toTopOf="@+id/btnUp"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,11 +47,11 @@
 
     <Button
         android:id="@+id/btnUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="410dp"
+        android:layout_width="221dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="469dp"
         android:text="SignUp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,12 +59,13 @@
 
     <Button
         android:id="@+id/btnGet"
-        android:layout_width="0dp"
+        android:layout_width="213dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:text="Get verifcation Code"
         app:layout_constraintBottom_toTopOf="@+id/etSMS"
-        app:layout_constraintEnd_toEndOf="@+id/etNumber"
-        app:layout_constraintStart_toStartOf="@+id/etNumber"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNumber" />
+
 </android.support.constraint.ConstraintLayout>

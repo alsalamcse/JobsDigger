@@ -33,7 +33,7 @@ public class SignInScreen extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplication(),CustomerSignUpScreen.class);
+                Intent intent = new Intent(getApplication(),HomeScreen.class);
                 startActivity(intent);
             }
         });
@@ -101,7 +101,7 @@ public class SignInScreen extends AppCompatActivity
                     etemail.setError("email or password is wrong"+task.getException().getMessage());
                     task.getException().printStackTrace();
 
-
+// TODO: 09/12/2019  check if customeor company.
 
                 }
 

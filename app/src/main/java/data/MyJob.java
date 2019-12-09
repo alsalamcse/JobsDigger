@@ -7,6 +7,13 @@ public class MyJob
    private String TermsofAcceptanc;
     private String place;
    private String Companey;
+    private String Owner;
+
+
+
+
+
+
 
     public MyJob(){
 
@@ -43,24 +50,33 @@ public class MyJob
         this.place = place;
     }
 
-    public String getCompaney() {
+    public String getCompaney()
+    {
         return Companey;
     }
-
     public void setCompaney(String companey) {
         Companey = companey;
+    }
+
+    public String getOwner()
+    {
+    return Owner;
+}
+
+    public void setOwner(String owner) {
+        Owner = owner;
     }
     @Override
     public String toString() {
         return "MyJob{" +
                 "key='" + key + '\'' +
-                ", Subject='" + Subject+ '\'' +
+                ", Subject='" + Subject + '\'' +
                 ", TermsofAcceptanc='" + TermsofAcceptanc + '\'' +
                 ", place='" + place + '\'' +
                 ", Companey='" + Companey + '\'' +
+                ", Owner='" + Owner + '\'' +
                 '}';
     }
-
 
 
 

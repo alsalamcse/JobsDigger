@@ -21,7 +21,7 @@ public class HomeScreen extends AppCompatActivity {
         btnSearcher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplication(),SignInScreen.class);
+                Intent intent=new Intent(getApplication(),CustomerSignUpScreen.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class HomeScreen extends AppCompatActivity {
         btncompany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplication(),SignInCompany.class);
+                Intent i=new Intent(getApplication(),CompanySignUpScreen.class);
                 startActivity(i);
 
             }

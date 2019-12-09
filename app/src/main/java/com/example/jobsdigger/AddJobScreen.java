@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -85,8 +86,13 @@ public class AddJobScreen extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         //.2-save in database
         DatabaseReference reference = firebaseDatabase.getReference();//make a barameter ( with var)
+        FirebaseAuth auth =FirebaseAuth.getInstance();//to get the user uid or details like email
+        String uid = auth.getCurrentUser().getUid();
+        myJob.setOwner(uid);
+
         String key = reference.child("Jobs").push().getKey();
-        reference.child("Jobs").child(key).setValue(myJob).addOnCompleteListener(AddJobScreen.this, new OnCompleteListener<Void>() {
+        myJob.setKey(key);
+        reference.child("Jobs").child(uid).child(key).setValue(myJob).addOnCompleteListener(AddJobScreen.this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {

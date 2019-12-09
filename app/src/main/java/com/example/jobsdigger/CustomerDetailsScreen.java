@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CustomerDetailsScreen extends AppCompatActivity {
     private EditText eteducation,ethistory,etage,etSkills,etlang,etinter,etIDnumber,etreference,etcourses;
@@ -89,6 +90,8 @@ public class CustomerDetailsScreen extends AppCompatActivity {
         }
         if (isok)
         {
+            Toast.makeText(CustomerDetailsScreen.this,"Add CV Completed",Toast.LENGTH_SHORT ).show();
+            finish();
 
         }
 
