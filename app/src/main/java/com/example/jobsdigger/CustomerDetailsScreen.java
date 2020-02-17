@@ -125,9 +125,8 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    Intent intent = new Intent(getApplication(), JobslistScreen.class);
+                    Intent intent = new Intent(getApplication(),JobslistScreen.class);
                     startActivity(intent);
-                    finish();
                 } else {
                     Toast.makeText(CustomerDetailsScreen.this, "Add Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
