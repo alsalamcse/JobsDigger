@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CompanySigninScreen"></activity>
         <activity
             android:name=".MainJobsScreen"
             android:label="@string/title_activity_main_jobs_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HomeScreen" />
         <activity android:name=".CustomerDetailsScreen" />
         <activity android:name=".SeeCustomersScreen" />
@@ -22,14 +23,7 @@
         <activity android:name=".JobslistScreen" />
         <activity android:name=".CustomerSignUpScreen" />
         <activity android:name=".CompanySignUpScreen" />
-        <activity android:name=".SignInScreen"></activity>
-        <activity android:name=".welcomescreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".SignInScreen" />
     </application>
 
 </manifest>

@@ -13,6 +13,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import data.MyJobSearcher;
+
 public class SignInScreen extends AppCompatActivity
 {
   private   EditText etemail,etpassword;
@@ -33,7 +35,7 @@ public class SignInScreen extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplication(),HomeScreen.class);
+                Intent intent = new Intent(getApplication(),CustomerSignUpScreen.class);
                 startActivity(intent);
             }
         });
@@ -86,6 +88,7 @@ public class SignInScreen extends AppCompatActivity
     private void signIn(String email,String password)
     {
         FirebaseAuth auth=FirebaseAuth.getInstance();
+
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -102,7 +105,6 @@ public class SignInScreen extends AppCompatActivity
                     etemail.setError("email or password is wrong"+task.getException().getMessage());
                     task.getException().printStackTrace();
 
-// TODO: 09/12/2019  check if customeor company.
 
 
                 }

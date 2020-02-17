@@ -10,7 +10,7 @@ public class MyCompany
 {
 
 
-    private String Email;
+    private static String Email;
     private String password;
     private String Name;
     private String place;
@@ -28,7 +28,7 @@ public class MyCompany
 
 
 
-    public String getEmail() {
+    public static String getEmail() {
         return Email;
     }
 

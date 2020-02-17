@@ -14,7 +14,6 @@ public class MyJobSearcher
     private String Id;
 
 
-
     public String getId() {
         return Id;
     }
