@@ -30,7 +30,7 @@ public class CustomerSignUpScreen extends AppCompatActivity {
         etPass=findViewById(R.id.etPass);
         etrewrite=findViewById(R.id.etrewrite);
         btnSave=findViewById(R.id.btnSave);
-        btnAddCV=findViewById(R.id.btnAddCV);
+        btnAddCV=findViewById(R.id.btnNext);
 
 
         btnAddCV.setOnClickListener(new View.OnClickListener() {
