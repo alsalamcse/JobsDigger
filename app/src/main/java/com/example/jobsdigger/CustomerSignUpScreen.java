@@ -18,7 +18,7 @@ import data.MyJobSearcher;
 
 public class CustomerSignUpScreen extends AppCompatActivity {
     private EditText etFirst,etLast,etPhone,etEmail,etPass,etrewrite;
-    private Button btnSave,btnAddCV;
+    private Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,11 @@ public class CustomerSignUpScreen extends AppCompatActivity {
         etEmail=findViewById(R.id.etEmail);
         etPass=findViewById(R.id.etPass);
         etrewrite=findViewById(R.id.etrewrite);
-        btnSave=findViewById(R.id.btnSave);
-        btnAddCV=findViewById(R.id.btnNext);
+        btnNext=findViewById(R.id.btnNext);
 
 
-        btnAddCV.setOnClickListener(new View.OnClickListener() {
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplication(),CustomerDetailsScreen.class);
@@ -44,12 +44,6 @@ public class CustomerSignUpScreen extends AppCompatActivity {
         });
 
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dataHandler();
-            }
-        });
 
 
     }

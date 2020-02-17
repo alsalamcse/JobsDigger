@@ -86,10 +86,11 @@
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="268dp"
-        android:layout_marginLeft="268dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="19dp"
         android:text="Next"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etrewrite"
         app:layout_constraintTop_toBottomOf="@+id/etrewrite" />
+
 </android.support.constraint.ConstraintLayout>
