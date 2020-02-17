@@ -63,10 +63,7 @@ public class CustomerDetailsScreen extends AppCompatActivity {
 
         }
 
-        if (Age.length() < 18) {
-            etage.setError("Enter the age of 18 years and above ");
-            isok = false;
-        }
+
         if (EmploymentHistory.length() == 0) {
             ethistory.setError("Enter EmploymentHistory");
             isok = false;
