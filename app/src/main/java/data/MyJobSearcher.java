@@ -2,15 +2,26 @@ package data;
 
 public class MyJobSearcher
 {
+
+
+
+
     private String Key;
     private String firstname;
     private String lastname;
     private String phone;
     private String email;
+    private String Id;
 
 
 
+    public String getId() {
+        return Id;
+    }
 
+    public void setId(String id) {
+        Id = id;
+    }
 
     public String getKey() {
         return Key;
@@ -51,15 +62,15 @@ public class MyJobSearcher
     public void setEmail(String email) {
         this.email = email;
     }
-
     @Override
     public String toString() {
-        return "MyUser{" +
+        return "MyJobSearcher{" +
                 "Key='" + Key + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
+                ", Id='" + Id + '\'' +
                 '}';
     }
 }

@@ -8,12 +8,25 @@ import java.lang.reflect.Array;
 public class MyCompany
 
 {
+
+
     private String Email;
     private String password;
     private String Name;
     private String place;
     private String phone;
-    private MyJobSearcher[]JobSearcher;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+
+
 
     public String getEmail() {
         return Email;
@@ -54,7 +67,17 @@ public class MyCompany
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
+    @Override
+    public String toString() {
+        return "MyCompany{" +
+                "Email='" + Email + '\'' +
+                ", password='" + password + '\'' +
+                ", Name='" + Name + '\'' +
+                ", place='" + place + '\'' +
+                ", phone='" + phone + '\'' +
+                ", id='" + id + '\'' +
+                '}';
+    }
 
 
 }

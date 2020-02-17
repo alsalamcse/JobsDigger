@@ -92,6 +92,7 @@ public class SignInScreen extends AppCompatActivity
                 if (task.isSuccessful())
                 {
 
+
                     Intent i =new Intent(getApplication(),JobslistScreen.class);
                     startActivity(i);
 
@@ -102,6 +103,7 @@ public class SignInScreen extends AppCompatActivity
                     task.getException().printStackTrace();
 
 // TODO: 09/12/2019  check if customeor company.
+
 
                 }
 
@@ -114,4 +116,7 @@ public class SignInScreen extends AppCompatActivity
 
 
     }
+
+
+
 }
