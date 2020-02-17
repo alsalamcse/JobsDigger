@@ -14,7 +14,12 @@
             android:name=".MainJobsScreen"
             android:label="@string/title_activity_main_jobs_screen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".HomeScreen" />
+        <activity android:name=".HomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".CustomerDetailsScreen" />
         <activity android:name=".SeeCustomersScreen" />
         <activity android:name=".AddJobScreen" />
