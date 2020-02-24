@@ -1,19 +1,18 @@
 package data;
 
-public class MyCustomerdetails
-{
+public class MyCustomerdetails {
 
 
     private String Key;
-    private String education;
     private String age;
     private String history;
     private String skills;
     private String lang;
     private String inter;
-    private String ref;
     private String cou;
     private String idnum;
+    private String FullName;
+    private String Phone;
     private String owner;
 
     public String getKey() {
@@ -24,23 +23,6 @@ public class MyCustomerdetails
         Key = key;
     }
 
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
-
-
-
-    public String getEducation() {
-        return education;
-    }
-
-    public void setEducation(String education) {
-        this.education = education;
-    }
 
     public String getAge() {
         return age;
@@ -82,13 +64,6 @@ public class MyCustomerdetails
         this.inter = inter;
     }
 
-    public String getRef() {
-        return ref;
-    }
-
-    public void setRef(String ref) {
-        this.ref = ref;
-    }
 
     public String getCou() {
         return cou;
@@ -105,23 +80,45 @@ public class MyCustomerdetails
     public void setIdnum(String idnum) {
         this.idnum = idnum;
     }
+
+    public String getFullName() {
+        return FullName;
+    }
+
+    public void setFullName(String fullName) {
+        FullName = fullName;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public void setPhone(String phone) {
+        Phone = phone;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
     @Override
     public String toString() {
-        return "customerdetails{" +
-                "education='" + education + '\'' +
+        return "MyCustomerdetails{" +
+                "Key='" + Key + '\'' +
                 ", age='" + age + '\'' +
                 ", history='" + history + '\'' +
                 ", skills='" + skills + '\'' +
                 ", lang='" + lang + '\'' +
                 ", inter='" + inter + '\'' +
-                ", ref='" + ref + '\'' +
                 ", cou='" + cou + '\'' +
                 ", idnum='" + idnum + '\'' +
-                ",owner='"+owner+'\''+
-                ",Key='"+Key+'\''+
+                ", FullName='" + FullName + '\'' +
+                ", Phone='" + Phone + '\'' +
+                ", owner='" + owner + '\'' +
                 '}';
     }
-
-
-
 }

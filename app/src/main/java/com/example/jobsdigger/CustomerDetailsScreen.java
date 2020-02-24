@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import data.MyCustomerdetails;
 
 public class CustomerDetailsScreen extends AppCompatActivity {
-    private EditText eteducation, ethistory, etage, etSkills, etlang, etinter, etIDnumber, etreference, etcourses;
+    private EditText  ethistory, etage, etSkills, etlang, etinter, etIDnumber, etcourses,etph,etfullname;
     private Button btnSave;
 
     @Override
@@ -26,13 +26,15 @@ public class CustomerDetailsScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details_screen);
 
-        eteducation = findViewById(R.id.eteducation);
+
+
+        etph=findViewById(R.id.etph);
+        etfullname=findViewById(R.id.etfullname);
         etage = findViewById(R.id.etage);
         ethistory = findViewById(R.id.ethistory);
         etSkills = findViewById(R.id.etSkills);
         etlang = findViewById(R.id.etlang);
         etinter = findViewById(R.id.etinter);
-        etreference = findViewById(R.id.etreference);
         etcourses = findViewById(R.id.etcourses);
         etIDnumber = findViewById(R.id.etIDnumber);
         btnSave = findViewById(R.id.btnSave);
@@ -47,21 +49,28 @@ public class CustomerDetailsScreen extends AppCompatActivity {
 
     private void dataHandler() {
         boolean isok = true;
-        String Education = eteducation.getText().toString();
+       String fullname=etfullname.getText().toString();
+        String phoneNumber=etph.getText().toString();
         String Age = etage.getText().toString();
         String EmploymentHistory = ethistory.getText().toString();
         String Skills = etSkills.getText().toString();
         String language = etlang.getText().toString();
         String interships = etinter.getText().toString();
-        String reference = etreference.getText().toString();
         String courses = etcourses.getText().toString();
         String IDnumber = etIDnumber.getText().toString();
 
-        if (Education.length() == 0) {
-            eteducation.setError("Enter Education");
-            isok = false;
-
+        if (fullname.length()==0)
+        {
+            etfullname.setError("Enter FullName");
+            isok=false;
         }
+
+        if (phoneNumber.length()<10) {
+            etph.setError("Have to be at least 10 nums");
+            isok = false;
+        }
+
+
 
 
         if (EmploymentHistory.length() == 0) {
@@ -80,10 +89,7 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             etinter.setError("Enter interships");
             isok = false;
         }
-        if (reference.length() == 0) {
-            etreference.setError("Enter reference");
-            isok = false;
-        }
+
         if (courses.length() == 0) {
             etcourses.setError("Enter courses");
             isok = false;
@@ -96,15 +102,15 @@ public class CustomerDetailsScreen extends AppCompatActivity {
 
         if (isok) {
             MyCustomerdetails myCustomerdetails = new MyCustomerdetails();
-            myCustomerdetails.setEducation(Education);
             myCustomerdetails.setAge(Age);
             myCustomerdetails.setHistory(EmploymentHistory);
             myCustomerdetails.setSkills(Skills);
             myCustomerdetails.setLang(language);
             myCustomerdetails.setInter(interships);
-            myCustomerdetails.setRef(reference);
             myCustomerdetails.setCou(courses);
             myCustomerdetails.setIdnum(IDnumber);
+            myCustomerdetails.setFullName(fullname);
+            myCustomerdetails.setPhone(phoneNumber);
             createMyCustomerdetails(myCustomerdetails);
         }
 
@@ -125,7 +131,7 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    Intent intent = new Intent(getApplication(),JobslistScreen.class);
+                    Intent intent=new Intent(getApplication(),JobslistScreen.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(CustomerDetailsScreen.this, "Add Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

@@ -10,24 +10,26 @@
         android:id="@+id/etage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
         android:ems="10"
         android:hint="Age"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/eteducation"
-        app:layout_constraintTop_toBottomOf="@+id/eteducation" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etph" />
 
     <EditText
         android:id="@+id/ethistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:hint="employment history"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/etage"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etage" />
 
     <EditText
@@ -36,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="11dp"
         android:ems="10"
         android:hint="skills"
         android:inputType="textPersonName"
@@ -49,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="languages"
         android:inputType="textPersonName"
@@ -57,25 +59,12 @@
         app:layout_constraintTop_toBottomOf="@+id/etSkills" />
 
     <EditText
-        android:id="@+id/eteducation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="13dp"
-        android:ems="10"
-        android:hint="education"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/etinter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="interships"
         android:inputType="textPersonName"
@@ -83,54 +72,68 @@
         app:layout_constraintTop_toBottomOf="@+id/etlang" />
 
     <EditText
-        android:id="@+id/etreference"
+        android:id="@+id/etcourses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="11dp"
         android:ems="10"
-        android:hint="reference"
+        android:hint="courses"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etinter" />
 
     <EditText
-        android:id="@+id/etcourses"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="courses"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/etreference"
-        app:layout_constraintTop_toBottomOf="@+id/etreference" />
-
-    <EditText
         android:id="@+id/etIDnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="ID number"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/etcourses"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etcourses" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="67dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="94dp"
+        android:layout_marginBottom="67dp"
         android:text="Save"
-        app:layout_constraintBottom_toBottomOf="@+id/etlang"
+        app:layout_constraintBottom_toTopOf="@+id/etSkills"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eteducation" />
+        app:layout_constraintTop_toTopOf="@+id/etph" />
+
+    <EditText
+        android:id="@+id/etfullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="PhoneNumber"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etfullname" />
+
 </android.support.constraint.ConstraintLayout>

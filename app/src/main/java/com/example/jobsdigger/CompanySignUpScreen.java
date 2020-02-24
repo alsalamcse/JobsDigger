@@ -60,8 +60,6 @@ public class CompanySignUpScreen extends AppCompatActivity {
             isok=false;
         }
         if (PhoneNumber.length()<10){
-
-
         etPhone.setError("Have to be at least 10 nums");
         isok=false;
     }

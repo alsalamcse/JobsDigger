@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import data.MyJobSearcher;
 
 public class CustomerSignUpScreen extends AppCompatActivity {
-    private EditText etFirst,etLast,etPhone,etEmail,etPass,etrewrite;
+    private EditText etEmail,etPass,etrewrite;
     private Button btnNext;
 
     @Override
@@ -25,9 +25,7 @@ public class CustomerSignUpScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_sign_up_screen);
 
-        etFirst=findViewById(R.id.etFirst);
-        etLast=findViewById(R.id.etLast);
-        etPhone=findViewById(R.id.etPhone);
+
         etEmail=findViewById(R.id.etEmail);
         etPass=findViewById(R.id.etPass);
         etrewrite=findViewById(R.id.etrewrite);
@@ -38,8 +36,7 @@ public class CustomerSignUpScreen extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplication(),CustomerDetailsScreen.class);
-                startActivity(intent);
+                dataHandler();
             }
         });
 
@@ -51,9 +48,7 @@ public class CustomerSignUpScreen extends AppCompatActivity {
     private void dataHandler()
     {
         boolean isok=true;
-        String FirstName=etFirst.getText().toString();
-        String LastName=etLast.getText().toString();
-        String phone=etPhone.getText().toString();
+
         String Email=etEmail.getText().toString();
         String password=etPass.getText().toString();
         String rewrite=etrewrite.getText().toString();
@@ -69,20 +64,15 @@ public class CustomerSignUpScreen extends AppCompatActivity {
             etPass.setError("Have to be at least 8 char and the same Password");
             isok=false;
         }
-        if (FirstName.length()==0)
-        {
-            etFirst.setError("enter name");
-            isok=false;
 
-        }
         if (isok)
         {
 
-            createAcount(Email,password,FirstName,LastName,phone);
+            createAcount(Email,password);
         }
     }
 
-    private void createAcount(String Email, String password, String FirstName, String LastName, String phone)
+    private void createAcount(String Email, String password)
     {
         FirebaseAuth auth=FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(Email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -90,7 +80,8 @@ public class CustomerSignUpScreen extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(CustomerSignUpScreen.this, "SignUp Successful ", Toast.LENGTH_SHORT).show();
-                    finish();
+                    Intent intent=new Intent(getApplication(),CustomerDetailsScreen.class);
+                    startActivity(intent);
                 }
                 else
                 {
