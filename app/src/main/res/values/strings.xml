@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">JobsDigger</string>
     <string name="title_activity_main_jobs_screen">MainJobsScreen</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Jops</string>
+    <string name="tab_text_2">customers</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_jobs">MainJobs</string>
 </resources>

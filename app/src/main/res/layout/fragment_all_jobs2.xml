@@ -6,7 +6,7 @@
     tools:context=".ui.main.AllJobsFragment">
 
     <ListView
-        android:id="@+id/lvJobs"
+        android:id="@+id/lstvjobs"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

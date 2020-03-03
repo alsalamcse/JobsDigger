@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
+
 public class ManageJobScreen extends AppCompatActivity {
 
    private Button btnaddjob,btnSeeCustomer,btnUpdate;
@@ -31,7 +33,7 @@ public class ManageJobScreen extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplication(),JobslistScreen.class);
+                Intent i=new Intent(getApplication(),MainJobs.class);
                 startActivity(i);
             }
         });
