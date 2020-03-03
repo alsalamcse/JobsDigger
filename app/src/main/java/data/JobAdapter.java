@@ -35,7 +35,6 @@ public class JobAdapter extends ArrayAdapter<MyJob>
 
 
 
-        //todo טיפול : באירוע מחיקה
 
                     FirebaseUtils.getReference().child(myJob.getKey()).removeValue(new DatabaseReference.CompletionListener() {
                         @Override

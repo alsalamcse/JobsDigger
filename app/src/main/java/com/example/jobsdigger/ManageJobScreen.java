@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class ManageJobScreen extends AppCompatActivity {
 
-   private Button btnaddjob,btnSeeCustomer,btnUpdate;
+   private Button btnaddjob,btnSeeCustomer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,24 +19,18 @@ public class ManageJobScreen extends AppCompatActivity {
 
         btnaddjob=findViewById(R.id.btnaddjob);
         btnSeeCustomer=findViewById(R.id.btnSeeCustomer);
-        btnUpdate=findViewById(R.id.btnUpdate);
+
 
 
         btnaddjob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplication(),AddJobScreen.class);
+                Intent intent=new Intent(getApplication(),MainJobs.class);
                 startActivity(intent);
             }
         });
 
-        btnUpdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getApplication(),MainJobs.class);
-                startActivity(i);
-            }
-        });
+
 
         btnSeeCustomer.setOnClickListener(new View.OnClickListener() {
             @Override

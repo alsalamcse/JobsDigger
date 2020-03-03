@@ -90,7 +90,7 @@ public class CompanySigninScreen extends AppCompatActivity {
                     {
 
 
-                        Intent i =new Intent(getApplication(),MainJobs.class);
+                        Intent i =new Intent(getApplication(),ManageJobScreen.class);
                         startActivity(i);
 
                     }
