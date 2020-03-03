@@ -9,11 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.jobsdigger.R;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 
 public class JobAdapter extends ArrayAdapter<MyJob>
 {
@@ -31,24 +28,15 @@ public class JobAdapter extends ArrayAdapter<MyJob>
         TextView tvTerms=vitem.findViewById(R.id.tvTerms);
         Button btnApply=vitem.findViewById(R.id.btnApplyJob);
 
-        final MyJob myJob = getItem(position);//getting data source
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        //todo טיפול : באירוע מחיקה
+            }
+        });
 
-                    FirebaseUtils.getReference().child(myJob.getKey()).removeValue(new DatabaseReference.CompletionListener() {
-                        @Override
-                        public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                            if(databaseError==null)
-                            {
-                                Toast.makeText(getContext(), "deleted", Toast.LENGTH_SHORT).show();
+        final MyJob myJob = getItem(position);
 
-                            }
-                            else {
-                                Toast.makeText(getContext(), "not deleted"+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-
-                            }
-                        }
-                    });
 
 
         //connect item view to data source
