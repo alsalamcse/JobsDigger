@@ -36,7 +36,9 @@
                 android:layout_marginStart="164dp"
                 android:layout_marginLeft="164dp"
                 android:layout_marginTop="24dp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
