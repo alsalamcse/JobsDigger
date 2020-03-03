@@ -21,7 +21,7 @@ public class JobAdapter extends ArrayAdapter<MyJob>
     public JobAdapter(@NonNull Context context) {
         super(context, R.layout.jobsitem);
     }
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, @Nullable View convertView, @NonNull final ViewGroup parent) {
 
         //building item view
         View vitem= LayoutInflater.from(getContext()).inflate(R.layout.jobsitem,parent,false);
@@ -30,6 +30,7 @@ public class JobAdapter extends ArrayAdapter<MyJob>
         TextView tvPlace=vitem.findViewById(R.id.tvPlace);
         TextView tvTerms=vitem.findViewById(R.id.tvTerms);
         Button btnApply=vitem.findViewById(R.id.btnApplyJob);
+
 
         final MyJob myJob = getItem(position);//getting data source
 
