@@ -23,8 +23,6 @@
         </activity>
         <activity android:name=".CustomerDetailsScreen" />
         <activity android:name=".AddJobScreen" />
-        <activity android:name=".ManageJobScreen" />
-        <activity android:name=".JobDetailsAndApplyJobScreen" />
         <activity android:name=".JobslistScreen" />
         <activity android:name=".CustomerSignUpScreen" />
         <activity android:name=".CompanySignUpScreen" />
