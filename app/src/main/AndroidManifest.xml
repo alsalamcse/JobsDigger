@@ -22,7 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".CustomerDetailsScreen" />
-        <activity android:name=".SeeCustomersScreen" />
         <activity android:name=".AddJobScreen" />
         <activity android:name=".ManageJobScreen" />
         <activity android:name=".JobDetailsAndApplyJobScreen" />
