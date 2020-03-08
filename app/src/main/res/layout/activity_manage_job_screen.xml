@@ -8,25 +8,23 @@
 
     <Button
         android:id="@+id/btnaddjob"
-        android:layout_width="121dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="205dp"
-        android:layout_marginBottom="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="38dp"
         android:text="Add Job"
         app:layout_constraintBottom_toTopOf="@+id/btnSeeCustomer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/btnSeeCustomer" />
 
     <Button
         android:id="@+id/btnSeeCustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="392dp"
+        android:layout_marginTop="291dp"
         android:text="See Customer"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnaddjob" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

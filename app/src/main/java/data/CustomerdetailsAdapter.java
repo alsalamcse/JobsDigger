@@ -8,20 +8,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.jobsdigger.R;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 
 public class CustomerdetailsAdapter extends ArrayAdapter<MyCustomerdetails>
 {
-        public CustomerdetailsAdapter(@NonNull Context context, int customer_details_item) {
+        public CustomerdetailsAdapter(@NonNull Context context) {
             super(context, R.layout.customer_details_item);
         }
 
 
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
             //building item view
             View vitem= LayoutInflater.from(getContext()).inflate(R.layout.customer_details_item,parent,false);
@@ -40,21 +39,6 @@ public class CustomerdetailsAdapter extends ArrayAdapter<MyCustomerdetails>
 
 
 
-
-            FirebaseUtils.getReference().child(myCustomerdetails.getKey()).removeValue(new DatabaseReference.CompletionListener() {
-                @Override
-                public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                    if(databaseError==null)
-                    {
-                        Toast.makeText(getContext(), "deleted", Toast.LENGTH_SHORT).show();
-
-                    }
-                    else {
-                        Toast.makeText(getContext(), "not deleted"+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-
-                    }
-                }
-            });
 
             tvName.setText(myCustomerdetails.getFullName());
             tvphone.setText(myCustomerdetails.getPhone());

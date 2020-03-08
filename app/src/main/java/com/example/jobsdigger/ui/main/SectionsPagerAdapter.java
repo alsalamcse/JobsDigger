@@ -16,20 +16,24 @@ import com.example.jobsdigger.R;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1,R.string.tab_text_2};
     private final Context mContext;
     private AllJobsFragment allJobsFragment;
+    private AllCustomerdetails allCustomerdetails;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
        allJobsFragment=new AllJobsFragment();
+       allCustomerdetails=new AllCustomerdetails();
     }
 
     @Override
     public Fragment getItem(int position) {
         if (position==0)
             return allJobsFragment;
+        if (position==1)
+            return allCustomerdetails;
         return null;
     }
 
@@ -42,6 +46,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 1;
+        return 2;
     }
 }

@@ -69,10 +69,6 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             etph.setError("Have to be at least 10 nums");
             isok = false;
         }
-
-
-
-
         if (EmploymentHistory.length() == 0) {
             ethistory.setError("Enter EmploymentHistory");
             isok = false;
@@ -131,7 +127,7 @@ public class CustomerDetailsScreen extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    Intent intent=new Intent(getApplication(),JobslistScreen.class);
+                    Intent intent=new Intent(getApplication(),MainJobs.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(CustomerDetailsScreen.this, "Add Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
