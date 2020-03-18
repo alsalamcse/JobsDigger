@@ -17,8 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import data.CustomerdetailsAdapter;
-import data.MyCustomerdetails;
+import com.example.jobsdigger.data.CustomerdetailsAdapter;
+import com.example.jobsdigger.data.MyCustomerdetails;
 
 
 public class AllCustomerdetails extends Fragment {

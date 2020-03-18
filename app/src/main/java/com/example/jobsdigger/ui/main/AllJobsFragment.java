@@ -17,8 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import data.JobAdapter;
-import data.MyJob;
+import com.example.jobsdigger.data.JobAdapter;
+import com.example.jobsdigger.data.MyJob;
 
 
 public class AllJobsFragment extends Fragment {

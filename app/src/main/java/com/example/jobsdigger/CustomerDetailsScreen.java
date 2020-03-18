@@ -30,7 +30,7 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 import java.util.UUID;
 
-import data.MyCustomerdetails;
+import com.example.jobsdigger.data.MyCustomerdetails;
 
 public class CustomerDetailsScreen extends AppCompatActivity {
     private EditText  ethistory, etage, etSkills, etlang, etinter, etIDnumber, etcourses,etph,etfullname;

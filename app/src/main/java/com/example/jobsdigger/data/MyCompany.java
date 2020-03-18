@@ -1,9 +1,5 @@
 
-package data;
-
-import com.example.jobsdigger.AddJobScreen;
-
-import java.lang.reflect.Array;
+package com.example.jobsdigger.data;
 
 public class MyCompany
 

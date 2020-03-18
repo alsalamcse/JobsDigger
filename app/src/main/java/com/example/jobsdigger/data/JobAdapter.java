@@ -1,4 +1,4 @@
-package data;
+package com.example.jobsdigger.data;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -29,8 +29,8 @@ public class JobAdapter extends ArrayAdapter<MyJob>
         Button btnApply=vitem.findViewById(R.id.btnApplyJob);
 
 
-        final MyJob myJob = getItem(position);//getting data source
-        //connect item view to data source
+        final MyJob myJob = getItem(position);//getting com.example.jobsdigger.data source
+        //connect item view to com.example.jobsdigger.data source
         tvSubject.setText(myJob.getSubject());
         tvCompany.setText(myJob.getCompaney());
         tvPlace.setText(myJob.getPlace());

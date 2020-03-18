@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "388418979245-crurbfv26m35v91tq5udvg7vgs32nplg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jobsdigger",
+            "certificate_hash": "ffbeb9ae160929814f756ed41ac1ebc24dee0d1e"
+          }
+        },
+        {
           "client_id": "388418979245-98v93risejp80f30lglf95as771picv8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

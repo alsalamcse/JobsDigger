@@ -1,4 +1,4 @@
-package data;
+package com.example.jobsdigger.data;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;

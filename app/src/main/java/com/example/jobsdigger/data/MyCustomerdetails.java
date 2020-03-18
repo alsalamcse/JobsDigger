@@ -1,4 +1,4 @@
-package data;
+package com.example.jobsdigger.data;
 
 public class MyCustomerdetails {
 

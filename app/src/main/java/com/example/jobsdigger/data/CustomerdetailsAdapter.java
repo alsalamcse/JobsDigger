@@ -1,4 +1,4 @@
-package data;
+package com.example.jobsdigger.data;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -35,7 +35,7 @@ public class CustomerdetailsAdapter extends ArrayAdapter<MyCustomerdetails>
             TextView tvId=vitem.findViewById(R.id.tvIDnumber);
 
 
-            final MyCustomerdetails myCustomerdetails = getItem(position);//getting data source
+            final MyCustomerdetails myCustomerdetails = getItem(position);//getting com.example.jobsdigger.data source
 
 
 
