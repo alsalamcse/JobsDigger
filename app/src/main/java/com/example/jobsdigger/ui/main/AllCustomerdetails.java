@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.jobsdigger.R;
@@ -26,8 +28,12 @@ public class AllCustomerdetails extends Fragment {
     private CustomerdetailsAdapter customerdetailsAdapter;
     private ListView listview;
 
+    private EditText etTitleTosearch;
+    private ImageButton imSearch;
+
 
     public AllCustomerdetails() {
+
     }
 
 
@@ -41,6 +47,17 @@ public class AllCustomerdetails extends Fragment {
         listview = view.findViewById(R.id.listview);
         listview.setAdapter(customerdetailsAdapter);
 
+        imSearch=view.findViewById(R.id.imSearch);
+        etTitleTosearch=view.findViewById(R.id.etTitleTosearch);
+
+        imSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String toSearch=etTitleTosearch.getText().toString();
+                readTasksFromFirebase(toSearch);
+            }
+        });
+
         return view;
 
     }
@@ -48,11 +65,11 @@ public class AllCustomerdetails extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        readTasksFromFirebase();
+        readTasksFromFirebase("");
     }
 
 
-    public void readTasksFromFirebase() {
+    public void readTasksFromFirebase(final String st) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         FirebaseAuth auth = FirebaseAuth.getInstance();
         String uid = auth.getUid();
@@ -66,7 +83,14 @@ public class AllCustomerdetails extends Fragment {
                 for (DataSnapshot d : dataSnapshot.getChildren()) {
                     MyCustomerdetails myCustomerdetails = d.getValue(MyCustomerdetails.class);
                     Log.d("MyCustomerdetails", myCustomerdetails.toString());
-                    customerdetailsAdapter.add(myCustomerdetails);
+                    if (st==null || st.length()==0)
+                    {
+                        customerdetailsAdapter.add(myCustomerdetails);
+                    }
+                    else
+                    if (myCustomerdetails.getSkills().contains(st))
+                        customerdetailsAdapter.add(myCustomerdetails);
+
 
                 }
             }
