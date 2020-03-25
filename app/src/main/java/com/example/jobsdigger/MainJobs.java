@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.jobsdigger.ui.main.SectionsPagerAdapter;
+import com.google.firebase.auth.OAuthProvider;
+import com.google.firebase.database.util.GAuthToken;
 
 public class MainJobs extends AppCompatActivity {
 
@@ -23,11 +25,11 @@ public class MainJobs extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
 
-//        if()
-//        {
-//            fab.setVisibility(View.GONE);
-//
-//        }
+  //    if()
+   //  {
+    //      fab.setVisibility(View.GONE);
+
+  //    }
 
 
             fab.setOnClickListener(new View.OnClickListener()

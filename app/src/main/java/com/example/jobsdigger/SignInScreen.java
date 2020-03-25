@@ -111,11 +111,9 @@ public class SignInScreen extends AppCompatActivity
             }
         });
 
-
-
-
-
     }
+
+
 
 
 

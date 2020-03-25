@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.jobsdigger.R;
@@ -26,6 +28,9 @@ public class AllJobsFragment extends Fragment {
     private JobAdapter jobAdapter;
     private ListView lstjobs;
 
+    private EditText etTitleTosearch;
+    private ImageButton imSearch;
+
     public AllJobsFragment() {
 
     }
@@ -42,17 +47,28 @@ public class AllJobsFragment extends Fragment {
         lstjobs = view.findViewById(R.id.lstvjobs);
         lstjobs.setAdapter(jobAdapter);
 
+        imSearch=view.findViewById(R.id.imSearch);
+        etTitleTosearch=view.findViewById(R.id.etTitleTosearch);
+
+        imSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String toSearch=etTitleTosearch.getText().toString();
+                readTasksFromFirebase(toSearch);
+            }
+        });
+
         return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        readTasksFromFirebase();
+        readTasksFromFirebase("");
     }
 
 
-    public void readTasksFromFirebase(){
+    public void readTasksFromFirebase(final String st){
         FirebaseDatabase database=FirebaseDatabase.getInstance();
         FirebaseAuth auth=FirebaseAuth.getInstance();
         String uid=auth.getUid();
@@ -66,7 +82,14 @@ public class AllJobsFragment extends Fragment {
                 {
                   MyJob myJob =d.getValue(MyJob.class);
                     Log.d("MyJobs",myJob.toString());
-                  jobAdapter.add(myJob);
+                    if (st==null || st.length()==0)
+                    {
+                        jobAdapter.add(myJob);
+                    }
+                    else
+                    if (myJob.getSubject().contains(st))
+                        jobAdapter.add(myJob);
+
 
                 }
             }
