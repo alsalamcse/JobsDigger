@@ -2,4 +2,5 @@
 <resources>
     <item name="etLast" type="id" />
     <item name="btnSave" type="id" />
+    <item name="cbIsDeleted" type="id" />
 </resources>

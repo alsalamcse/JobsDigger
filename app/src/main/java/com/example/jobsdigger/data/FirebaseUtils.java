@@ -6,12 +6,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class FirebaseUtils
 {
-    public static FirebaseAuth auth=FirebaseAuth.getInstance();
-    public static FirebaseDatabase database=FirebaseDatabase.getInstance();
-    public static DatabaseReference getReference()
+    public   static FirebaseAuth auth=FirebaseAuth.getInstance();
+    public static FirebaseDatabase db=FirebaseDatabase.getInstance();
+
+    public static DatabaseReference getRefrence()
     {
         String uid = auth.getUid();
-        return database.getReference().child("Jobs").child(uid);
-
+        return  db.getReference().child("Jobs").child(uid);
     }
 }
