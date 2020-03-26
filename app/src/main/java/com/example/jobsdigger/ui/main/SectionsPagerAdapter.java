@@ -6,6 +6,7 @@ import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.View;
 
 import com.example.jobsdigger.R;
 
@@ -27,6 +28,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
        allJobsFragment=new AllJobsFragment();
        allCustomerdetails=new AllCustomerdetails();
     }
+
 
     @Override
     public Fragment getItem(int position) {

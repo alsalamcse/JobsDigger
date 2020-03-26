@@ -1,8 +1,12 @@
 package com.example.jobsdigger.data;
 
+import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,15 +14,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jobsdigger.R;
+import com.example.jobsdigger.ui.main.AllCustomerdetails;
+import com.example.jobsdigger.ui.main.SectionsPagerAdapter;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 
 public class JobAdapter extends ArrayAdapter<MyJob>
 {
+
+ ViewPager viewPager;
 
     public JobAdapter(@NonNull Context context) {
         super(context, R.layout.jobsitem);
@@ -31,8 +40,18 @@ public class JobAdapter extends ArrayAdapter<MyJob>
         TextView tvCompany=vitem.findViewById(R.id.tvCompany);
         TextView tvPlace=vitem.findViewById(R.id.tvPlace);
         TextView tvTerms=vitem.findViewById(R.id.tvTerms);
-        Button btnApply=vitem.findViewById(R.id.btnApplyJob);
+        final Button btnApply=vitem.findViewById(R.id.btnApplyJob);
         CheckBox cbIsDleted=vitem.findViewById(R.id.cbDeleted);
+
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                TabHost tabHost = viewPager.findViewById(R.id.tabs);
+                tabHost.setCurrentTab(1);
+
+            }
+        });
 
         final MyJob myJob = getItem(position);//getting com.example.jobsdigger.data source
 
@@ -67,6 +86,8 @@ public class JobAdapter extends ArrayAdapter<MyJob>
         tvTerms.setText(myJob.getTermsofAcceptanc());
 
         return vitem;
+
     }
+
 
 }
