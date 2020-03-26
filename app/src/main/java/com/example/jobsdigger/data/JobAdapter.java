@@ -43,17 +43,22 @@ public class JobAdapter extends ArrayAdapter<MyJob>
         final Button btnApply=vitem.findViewById(R.id.btnApplyJob);
         CheckBox cbIsDleted=vitem.findViewById(R.id.cbDeleted);
 
+
+
+        final MyJob myJob = getItem(position);//getting com.example.jobsdigger.data source
+
         btnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                TabHost tabHost = viewPager.findViewById(R.id.tabs);
-                tabHost.setCurrentTab(1);
+                viewPager.setCurrentItem(1);
 
             }
         });
 
-        final MyJob myJob = getItem(position);//getting com.example.jobsdigger.data source
+
+
+
 
         cbIsDleted.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
