@@ -9,12 +9,6 @@ public class MyJob
    private String Companey;
     private String Owner;
 
-
-
-
-
-
-
     public MyJob(){
 
     }
@@ -77,8 +71,4 @@ public class MyJob
                 ", Owner='" + Owner + '\'' +
                 '}';
     }
-
-
-
-
 }

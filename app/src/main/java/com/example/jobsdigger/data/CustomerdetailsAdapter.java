@@ -17,6 +17,7 @@ import com.example.jobsdigger.R;
 
 public class CustomerdetailsAdapter extends ArrayAdapter<MyCustomerdetails>
 {
+    private Uri filePath;
 
         public CustomerdetailsAdapter(@NonNull Context context) {
             super(context, R.layout.customer_details_item);
@@ -49,6 +50,10 @@ public class CustomerdetailsAdapter extends ArrayAdapter<MyCustomerdetails>
             imcall.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
+                    Intent callIntent =new Intent(Intent.ACTION_CALL);
+                    callIntent.setType("phone/*");
+                    callIntent.setData(Uri.parse(myCustomerdetails.getPhone()));
+
                     Toast.makeText(getContext(), "calling:"+myCustomerdetails.getPhone(), Toast.LENGTH_SHORT).show();
                 }
             });
@@ -67,7 +72,6 @@ public class CustomerdetailsAdapter extends ArrayAdapter<MyCustomerdetails>
 
             return vitem;
         }
-
 }
 
 
